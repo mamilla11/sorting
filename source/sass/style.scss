@@ -1,0 +1,136 @@
+@import "normalize.scss";
+@import "fonts.scss";
+
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	font-family: "Oswald", "Arial", sans-serif;
+}
+
+.page {
+	max-width: 1300px;
+	padding: 0 40px;
+}
+
+.title {
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	margin: 80px 0 80px 0;
+	color: #546a76;
+
+	&--subtitle {
+		font-size: 18px;
+		margin: -15px 0 40px 0;
+		background-color: #ffffff;
+		padding: 0 15px;
+		display: none;
+	}
+}
+
+.button {
+  display: inline-block;
+	box-sizing: border-box;
+	margin: 5px;
+  padding: 10px 15px 9px 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+	font-size: 16px;
+	border: 1px solid darken(#546a76, 10%);
+	border-radius: 5px;
+	background-color: lighten(#546a76, 40%);
+	color: darken(#546a76, 10%);
+	outline: none;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		opacity: 0.7;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+}
+
+.sort {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sirt__field {
+	width: 52%;
+}
+
+.sort__canvas {
+	display: inline-block;
+	border: solid 2px #546a76;
+	outline: solid 5px lighten(#546a76, 40%);
+	box-shadow: 0px 0px 0px 12px #546a76;
+	background-color: white;
+}
+
+.sort__controls {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 21%;
+	margin-left: 40px;
+}
+
+.sort__settings {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	flex-shrink: 0;
+	width: 21%;
+	margin-right: 40px;
+}
+
+.setting {
+	display: flex;
+	flex-shrink: 0;
+	border-radius: 5px;
+}
+
+.setting__name {
+	text-transform: uppercase;
+	padding: 0 10px;
+	font-size: 15px;
+	color: #546a76;
+	text-align: center;
+}
+
+.setting__button {
+	font-size: 0;
+	width: 45px;
+	height: 45px;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&--smaller {
+		background-image: url("../img/left-arrow.svg");
+	}
+
+	&--bigger {
+		background-image: url("../img/right-arrow.svg");
+	}
+}
+
+.setting__value {
+	width: 45px;
+	height: 45px;
+	box-sizing: border-box;
+	margin: 5px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 14px;
+	border: 1px solid darken(#546a76, 10%);
+	border-radius: 5px;
+}
