@@ -45,14 +45,14 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("html", function() {
+gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([include()]))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
 });
 
-gulp.task("svg", function() {
+gulp.task("svg", function () {
   return gulp.src("source/img/**/*.svg", {
     base: "source"
     })
@@ -60,7 +60,7 @@ gulp.task("svg", function() {
     .pipe(gulp.dest("build"))
 });
 
-gulp.task("js", function() {
+gulp.task("js", function () {
   return gulp.src("source/js/**/*.js", {
     base: "source"
     })
@@ -78,7 +78,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.task("refresh", function(done) {
+  gulp.task("refresh", function (done) {
     server.reload();
     done();
   });
