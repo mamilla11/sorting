@@ -1,8 +1,8 @@
 {
-  "name": "cat-energy",
-  "version": "15.0.0",
+  "name": "sorting",
+  "version": "1.0.0",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Sorting Vizualizations",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.1.x",
@@ -26,6 +26,9 @@
     "uglify-es": "^3.3.9"
   },
   "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp css",
     "start": "gulp start"
   },
@@ -33,6 +36,14 @@
     "last 2 versions",
     "IE 11",
     "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
   ],
   "engines": {
     "node": "8.12"

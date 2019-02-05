@@ -1,19 +1,17 @@
 "use strict";
 
 var gulp = require("gulp");
-var babel = require("gulp-babel");
 var del = require("del");
 var rename = require("gulp-rename");
-var posthtml = require("gulp-posthtml"); 
-var include = require("posthtml-include"); 
-var htmlmin = require("gulp-htmlmin"); 
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
+var htmlmin = require("gulp-htmlmin");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var svgmin = require("gulp-svgmin");
-//var uglify = require("gulp-uglify");
 var uglifyes = require('uglify-es');
 var composer = require('gulp-uglify/composer');
 var uglify = composer(uglifyes, console);

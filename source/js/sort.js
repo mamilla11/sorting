@@ -84,7 +84,7 @@
   };
 
   var sleep = function (ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));	
+    return new Promise(resolve => setTimeout(resolve, ms));
   };
 
   var bubbleSort = async function () {
@@ -103,8 +103,8 @@
 
   var cocktailSort = async function () {
     inProcess = true;
-    var i = 0; 
-    var left = 0; 
+    var i = 0;
+    var left = 0;
     var right = dataSize - 1;
 
     while (left < right) {
@@ -200,7 +200,7 @@
         await QS(left, partitionIndex - 1);
         await QS(partitionIndex + 1, right);
       }
-      return Promise.resolve();	
+      return Promise.resolve();
     };
 
     inProcess = false;
@@ -227,9 +227,9 @@
       if (x[mid].value <= x[right].value) {
         return;
       }
-        
+
       while (left <= mid && right <= last) {
-        if(x[left].value <= x[right].value){
+        if (x[left].value <= x[right].value) {
           left++;
         }
         else {
@@ -245,7 +245,7 @@
       return Promise.resolve();
     };
 
-    var moveArr = function (x, left, right) { 
+    var moveArr = function (x, left, right) {
       var tempArr = [];
       for (var i = 0, j = left; i < (right - left); i++, j++) {
         tempArr[i] = x[j].value;

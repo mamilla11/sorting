@@ -1,0 +1,67 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 5px 5px 5px 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+  border: 1px solid darken(#546a76, 10%);
+  border-radius: 5px;
+  background-color: lighten(#546a76, 40%);
+  color: darken(#546a76, 10%);
+  outline: none;
+  cursor: pointer;
+  width: 45%;
+  letter-spacing: 1px;
+
+  &--image {
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--left {
+    background-image: url("../img/left-arrow.svg");
+  }
+
+  &--right {
+    background-image: url("../img/right-arrow.svg");
+  }
+
+  &--reset {
+    width: 100%;
+    border: 1px solid darken(#b4ceb3, 40%);
+    background-color: lighten(#b4ceb3, 10%);
+    color: darken(#b4ceb3, 40%);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: 30%;
+    font-size: 16px;
+
+    &--image {
+      font-size: 0;
+      width: 35px;
+      height: 35px;
+    }
+
+    &--reset {
+      width: 100%;
+      margin: 20px 5px;
+    }
+  }
+}
